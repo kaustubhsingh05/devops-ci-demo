@@ -1,6 +1,6 @@
 # DevOps CI Demo
 
-A simple web application with a CI/CD pipeline demonstration using Git, Jenkins, Selenium, and Docker.
+A simple web application with a CI/CD pipeline demonstration using Git, Selenium, and Docker.
 
 ## Project contents
 
@@ -8,7 +8,6 @@ A simple web application with a CI/CD pipeline demonstration using Git, Jenkins,
 - `styles.css` — basic styling
 - `app.js` — button interaction logic
 - `Dockerfile` — builds an NGINX container for deployment
-- `Jenkinsfile` — declarative pipeline for checkout, test, and Docker build
 - `tests/test_selenium.py` — Selenium functionality test
 - `requirements.txt` — Python dependencies for Selenium testing
 
@@ -19,11 +18,8 @@ A simple web application with a CI/CD pipeline demonstration using Git, Jenkins,
 2. **Branch, commit, merge**
    - Use Git locally to create a branch, commit changes, and merge into `main`.
 3. **Selenium test**
-   - `tests/test_selenium.py` verifies that clicking the app button shows the expected message.
-4. **Jenkins job integration**
-   - `Jenkinsfile` defines a Jenkins Pipeline.
-   - `jenkins-job-config.xml` contains a sample GitHub-integrated Jenkins Pipeline job configuration.
-5. **Docker build and deployment**
+   - `tests/test_selenium.py` verifies multiple functionalities of the web application including message display, counter, text input, dark mode toggle, calculator, todo list, and random color generator.
+4. **Docker build and deployment**
    - `Dockerfile` packages the static site with NGINX.
 
 ## Setup and run locally
@@ -58,18 +54,6 @@ docker run --rm -p 8080:80 devops-ci-demo:latest
 
 Then open `http://localhost:8080`.
 
-## Jenkins job configuration
-
-Use `jenkins-job-config.xml` as a sample pipeline job definition for Jenkins to track this GitHub repository.
-
-### Example GitHub job steps
-
-- Create a new Pipeline job in Jenkins.
-- Configure SCM as Git.
-- Set repository URL to the GitHub repo.
-- Use the `Jenkinsfile` from repository.
-
 ## Notes
 
-- Replace `https://github.com/<your-user>/devops-ci-demo.git` with the actual repository URL in `jenkins-job-config.xml`.
-- The Jenkins pipeline in `Jenkinsfile` expects Python and Docker available on the Jenkins agent.
+- The CI pipeline uses Git for version control, Selenium for testing, and Docker for deployment.
