@@ -10,12 +10,33 @@
   <div class="container">
     <header>
       <h1>DevOps CI Demo App</h1>
-      <p>Click the button to verify page interaction.</p>
+      <p>Interact with the features below.</p>
     </header>
 
     <main>
-      <button id="show-message-btn">Show Message</button>
-      <div id="message" class="message" aria-live="polite"></div>
+      <section>
+        <h2>Message Display</h2>
+        <button id="show-message-btn">Show Message</button>
+        <div id="message" class="message" aria-live="polite"></div>
+      </section>
+
+      <section>
+        <h2>Counter</h2>
+        <button id="increment-btn">Increment Counter</button>
+        <p id="counter">Counter: 0</p>
+      </section>
+
+      <section>
+        <h2>Text Input</h2>
+        <input type="text" id="text-input" placeholder="Enter some text" />
+        <button id="display-text-btn">Display Text</button>
+        <div id="displayed-text" class="message"></div>
+      </section>
+
+      <section>
+        <h2>Dark Mode Toggle</h2>
+        <button id="toggle-theme-btn">Toggle Dark Mode</button>
+      </section>
     </main>
 
     <footer>
